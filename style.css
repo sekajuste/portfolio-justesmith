@@ -29,7 +29,9 @@ body {
   cursor: none;
 }
 
-
+/* =====================
+   CUSTOM CURSOR
+   ===================== */
 .cursor {
   width: 8px; height: 8px;
   background: var(--accent);
@@ -53,7 +55,9 @@ body {
   transform: translate(-12px, -12px);
 }
 
-
+/* =====================
+   NAVBAR
+   ===================== */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -322,7 +326,7 @@ body {
 }
 .scroll-hint span { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; }
 
-
+/* Line reveal animation */
 .line-reveal {
   display: inline-block;
   opacity: 0;
@@ -337,7 +341,9 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
+/* =====================
+   SECTIONS COMMON
+   ===================== */
 .section {
   padding: 100px 80px;
   position: relative;
@@ -361,7 +367,9 @@ body {
 .section-title.centered { text-align: center; margin-bottom: 64px; }
 .accent { color: var(--accent); }
 
-
+/* =====================
+   ABOUT
+   ===================== */
 .about-section { background: var(--bg-2); }
 .about-grid {
   display: grid;
@@ -443,6 +451,9 @@ body {
   line-height: 1.6;
 }
 
+/* =====================
+   SKILLS
+   ===================== */
 .skills-section { background: var(--bg); }
 .skills-grid {
   display: grid;
@@ -506,7 +517,9 @@ body {
   to { transform: scaleX(1); }
 }
 
-
+/* =====================
+   PROJECTS
+   ===================== */
 .projects-section { background: var(--bg-2); }
 .projects-grid {
   display: grid;
@@ -575,7 +588,9 @@ body {
   pointer-events: none;
 }
 
-
+/* =====================
+   CONTACT
+   ===================== */
 .contact-section { background: var(--bg); }
 .contact-grid {
   display: grid;
@@ -684,6 +699,9 @@ body {
 }
 .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(0,229,160,0.3); }
 
+/* =====================
+   FOOTER
+   ===================== */
 .footer {
   background: var(--bg-2);
   border-top: 1px solid var(--border);
@@ -711,6 +729,9 @@ body {
 }
 .back-top:hover { color: var(--accent); }
 
+/* =====================
+   RESPONSIVE
+   ===================== */
 @media (max-width: 1024px) {
   .section { padding: 80px 40px; }
   .hero { padding: 120px 40px 80px; }
@@ -720,19 +741,63 @@ body {
   .footer { padding: 32px 40px; }
 }
 @media (max-width: 768px) {
+  /* Navbar */
+  .navbar { padding: 14px 20px; }
   .navbar nav, .navbar-cta { display: none; }
-  .hero { flex-direction: column; text-align: center; padding: 120px 24px 80px; }
-  .hero-actions { justify-content: center; }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 60px;
+    gap: 32px;
+  }
   .hero-image-wrap { order: -1; }
-  .image-frame { width: 240px; height: 290px; }
+  .image-frame { width: 200px; height: 240px; }
   .tag-1, .tag-2, .tag-3 { display: none; }
-  .hero-name { font-size: 36px; }
-  .section { padding: 60px 24px; }
-  .skills-grid, .projects-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .hero-name {
+    font-size: 38px;
+    letter-spacing: -1px;
+    word-break: break-word;
+  }
+  .hero-subtitle { font-size: 15px; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .btn-primary, .btn-ghost {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 14px 24px;
+  }
+  .hero-badge { font-size: 12px; padding: 6px 14px; }
+
+  /* Sections */
+  .section { padding: 60px 20px; }
+  .section-title { font-size: 28px; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-visual { grid-template-columns: 1fr; }
   .about-card-big { grid-column: span 1; }
-  .footer { padding: 24px; }
+  .about-stats { flex-wrap: wrap; gap: 24px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .social-row { flex-wrap: wrap; }
+  .contact-form { padding: 24px 20px; }
+
+  /* Footer */
+  .footer { padding: 24px 20px; }
   .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
   .scroll-hint { display: none; }
 }
